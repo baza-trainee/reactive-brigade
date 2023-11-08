@@ -2,7 +2,15 @@
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend:
+		{
+			fontFamily: {
+				'russo': ['Russo One', 'sans-serif']
+			},
+			maxWidth: {
+				'230px': '230px'
+			}
+		},
 	},
 	plugins: [],
 };
