@@ -30,13 +30,13 @@ const Header = () => {
                     </div>
                     <nav className="hidden py-3 md:block">
                         <ul className="flex gap-x-8">
-                            <li className="text-lg font-normal text-white font-russo">Наша мета</li>
-                            <li className="text-lg font-normal text-white font-russo">Про бригаду</li>
-                            <li className="text-lg font-normal text-white font-russo">Чому це важливо</li>
+                            <li className="text-lg font-normal text-white font-heading">Наша мета</li>
+                            <li className="text-lg font-normal text-white font-heading">Про бригаду</li>
+                            <li className="text-lg font-normal text-white font-heading">Чому це важливо</li>
                         </ul>
                     </nav>
                     <div className="relative hidden after:bg-orange-500 after:block after:absolute after:inset-1 after:w-36 after:h-8 after:blur-none after:hover:blur-md md:block">
-                        <button className="relative z-30 py-2 text-lg text-white bg-orange-500 rounded px-7" type="button">ДОНАТИТИ</button>
+                        <button className="relative z-30 py-2 text-lg text-white bg-orange-500 rounded px-7 font-body" type="button">ДОНАТИТИ</button>
                     </div>
                     <div onClick={() => toggleMenu()}
                         className={burgerClass}>
