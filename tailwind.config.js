@@ -15,6 +15,9 @@ export default {
 			backgroundImage: {
 				share: "url('./assets/vehicle.jpg')",
 			},
+			maxWidth: {
+				'230px': '230px'
+			}
 		},
 	},
 	plugins: [],
