@@ -1,9 +1,9 @@
 const BurgerMenu = (props) => {
-    let burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-full bg-lime-900 transition-all duration-500';
+    let burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-full bg-green transition-all duration-500';
 
     props.menuOpen 
-    ? burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-0 bg-lime-900 transition-all duration-500' 
-    : burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-full bg-lime-900 transition-all duration-500';
+    ? burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-0 bg-green transition-all duration-500' 
+    : burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-full bg-green transition-all duration-500';
     
     return (
         <>
@@ -17,7 +17,7 @@ const BurgerMenu = (props) => {
                         </ul>
                     </nav>
                     <div className="block mt-8 text-center md:hidden">
-                        <button className="py-4 mx-auto text-3xl text-white bg-orange-500 rounded px-7 font-body" type="button">ДОНАТИТИ</button>
+                        <button className="py-4 mx-auto text-3xl text-white rounded bg-orange px-7 font-body" type="button">ДОНАТИТИ</button>
                     </div>
                 </div>
             </div>
