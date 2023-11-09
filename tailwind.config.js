@@ -14,6 +14,7 @@ export default {
 			},
 			backgroundImage: {
 				share: "url('./assets/vehicle.jpg')",
+				goalBgImg: "url('./assets/progress-bar/bg-image.jpg')",
 			},
 			maxWidth: {
 				'230px': '230px'
