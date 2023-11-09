@@ -78,7 +78,7 @@ const ProgressBar = () => {
 
             <div className="flex justify-between items-center">
               <span className="font-medium leading-normal text-[8px] md:text-[15px]">
-                0%
+                {balancePart}%
               </span>
               <div className="flex items-baseline md:space-x-2">
                 <span className="font-normal leading-[20px] text-[15px] hidden md:block">
