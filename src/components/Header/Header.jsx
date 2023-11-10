@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import BurgerMenu from './Burger-menu';
 import logo from '../../assets/header/logo.svg'
+import { useState } from 'react';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
