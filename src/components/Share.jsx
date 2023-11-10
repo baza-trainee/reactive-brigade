@@ -30,7 +30,7 @@ const Share = () => {
 					</p>
 					<div className='flex flex-col items-center gap-3 mt-3 md:gap-8 md:flex-row'>
 						<button
-							className='px-4 py-3 font-medium duration-300 rounded bg-green hover:shadow hover:shadow-slate-200'
+							className='px-4 py-3 font-medium duration-300 rounded bg-green hover:shadow-inner hover:shadow-slate-200'
 							onClick={openModal}>
 							ПОДІЛИТИСЬ
 						</button>
@@ -41,7 +41,7 @@ const Share = () => {
 								rel='noopener noreferrer'>
 								<LiaFacebookF
 									size={30}
-									className='p-1 duration-300 bg-blue-800 hover:shadow hover:shadow-slate-200'
+									className='p-1 duration-300 bg-blue-800 hover:shadow-inner hover:shadow-slate-200'
 								/>
 							</a>
 							<a
@@ -50,7 +50,7 @@ const Share = () => {
 								rel='noopener noreferrer'>
 								<LiaTelegram
 									size={30}
-									className='p-1 duration-300 bg-sky-500 hover:shadow hover:shadow-slate-200'
+									className='p-1 duration-300 bg-sky-500 hover:shadow-inner hover:shadow-slate-200'
 								/>
 							</a>
 							<a
@@ -59,7 +59,7 @@ const Share = () => {
 								rel='noopener noreferrer'>
 								<LiaLinkedinIn
 									size={30}
-									className='p-1 duration-300 bg-blue-800 hover:shadow hover:shadow-slate-200'
+									className='p-1 duration-300 bg-blue-800 hover:shadow-inner hover:shadow-slate-200'
 								/>
 							</a>
 						</div>
