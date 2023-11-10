@@ -13,7 +13,8 @@ export default {
 				black: '#2D362E',
 			},
 			backgroundImage: {
-				share: "url('./assets/vehicle.jpg')",
+				share: "url('./assets/share.jpg')",
+				goalBgImg: "url('./assets/progress-bar/bg-image.jpg')",
 			},
 			maxWidth: {
 				'230px': '230px'

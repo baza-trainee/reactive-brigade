@@ -1,27 +1,21 @@
-import Header from './components/Header/Header';
 import About from './components/About';
 import Footer from './components/Footer';
+import Header from './components/Header/Header';
 import Hero from './components/Hero';
 import Important from './components/Important';
-import Modal from './components/Modal';
-import Navbar from './components/Navbar';
 import ProgressBar from './components/ProgressBar';
 import Share from './components/Share';
-import { useState } from 'react';
 
 const App = () => {
-	const [isModalOpen, setIsModalOpen] = useState(false);
 	return (
 		<>
 			<Header />
-			<Navbar />
 			<Hero />
 			<ProgressBar />
 			<About />
 			<Important />
-			<Share setIsModalOpen={setIsModalOpen}/>
+			<Share />
 			<Footer />
-			<Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
 		</>
 	);
 };
