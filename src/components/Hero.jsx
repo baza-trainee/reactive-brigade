@@ -2,7 +2,7 @@ import car from "../assets/hero_car.webp";
 
 const Hero = () => {
   return (
-    <section className="relative max-w-5xl px-2 mx-auto overflow-hidden text-black sm:px-14 my-9">
+    <section className="relative max-w-4xl mx-auto overflow-hidden text-black my-9 w-[90vw]">
       <h1 className="mb-2 text-2xl text-center sm:mb-5 sm:text-4xl md:text-5xl font-heading">
         Збір на позашляховик
       </h1>
@@ -32,7 +32,7 @@ const Hero = () => {
           href="https://www.monobank.com.ua/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-shrink-0 px-4 py-3 text-base font-medium uppercase rounded-md sm:mt-8 sm:text-lg hover:shadow-xl focus:shadow-xl focus:outline-none bg-orange "
+          className="flex-shrink-0 px-4 py-3 text-base font-medium uppercase duration-300 rounded-md sm:mt-8 sm:text-lg focus:shadow-xl focus:outline-none bg-orange hover:shadow-inner hover:shadow-slate-200"
         >
           Донат на пікап
         </a>
