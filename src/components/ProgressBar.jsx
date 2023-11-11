@@ -15,10 +15,9 @@ const ProgressBar = () => {
     queryFn: fetchAccountBalance,
     refetchInterval: 60000,
   });
-  console.log(res); //приходит объект со свойстовм data, но там undefinde
-
-  const balance = Math.floor(res.data.jars[0].balance / 100);
-  //   const balance = 45000;
+  console.log(res);
+//   const balance = Math.floor(res.data.jars[0].balance / 100);
+    const balance = 45000;
 
   const balancePart = balance ? Math.floor((balance / 250000) * 100) : 0;
   const progress = Math.floor((itemBar.length / 100) * balancePart);
@@ -28,8 +27,7 @@ const ProgressBar = () => {
   }
 
   return (
-    <section className="max-w-5xl mx-auto py-14 ">
-      <div className="px-4 md:px-[62px] mx-auto">
+    <section className="max-w-4xl mx-auto py-14 w-[90vw]">
         <h2 className=" relative text-[70px] leading-none font-semibold text-center text-black mb-8 md:mb-[90px]">
           Мета
           <img
@@ -94,7 +92,6 @@ const ProgressBar = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
