@@ -1,8 +1,5 @@
-// import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
-
+import { useQuery } from "@tanstack/react-query";
 import { fetchAccountBalance } from "../services/fetchAccountBalance";
-
 import svg from "../assets/progress-bar/goal.svg";
 
 const itemBar = Array.from({ length: 24 }, (_, idx) => ({
@@ -13,13 +10,15 @@ const itemBar = Array.from({ length: 24 }, (_, idx) => ({
 const sum = (number) => number.toLocaleString("ru-RU");
 
 const ProgressBar = () => {
-  //   const { data: balance } = useQuery(
-  //    ["accountBalance"],
-  //     fetchAccountBalance, {
-  //     refetchInterval: 60000,
-  //   });
-  const [balance, setBalance] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const res = useQuery({
+    queryKey: ["accountBalance"],
+    queryFn: fetchAccountBalance,
+    refetchInterval: 60000,
+  });
+  console.log(res); //приходит объект со свойстовм data, но там undefinde
+
+  const balance = Math.floor(res.data.jars[0].balance / 100);
+  //   const balance = 45000;
 
   const balancePart = balance ? Math.floor((balance / 250000) * 100) : 0;
   const progress = Math.floor((itemBar.length / 100) * balancePart);
@@ -28,28 +27,8 @@ const ProgressBar = () => {
     itemBar[i].isBalance = true;
   }
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      async function saveBalance() {
-        try {
-          setIsLoading(true);
-
-          const data = await fetchAccountBalance();
-          setBalance(Math.floor(data.jars[0].balance / 100));
-        } catch (error) {
-          console.log(error);
-        } finally {
-          setIsLoading(false);
-          clearInterval(intervalId);
-        }
-      }
-      saveBalance();
-    }, 5000);
-  }, []);
-
   return (
     <section className="max-w-5xl mx-auto py-14 ">
-      {isLoading && <p>Loading...</p>}
       <div className="px-4 md:px-[62px] mx-auto">
         <h2 className=" relative text-[70px] leading-none font-semibold text-center text-black mb-8 md:mb-[90px]">
           Мета
@@ -65,7 +44,7 @@ const ProgressBar = () => {
 
         <div className="md:px-[18px] md:py-[86px] px-2.5 py-7 overflow-hidden bg-center bg-no-repeat bg-cover rounded md:rounded-lg bg-goalBgImg">
           <div className="relative py-2 pr-6 text-black bg-white rounded md:px-20 md:py-7 pl-9 md:rounded-lg bg-opacity-60">
-            <div className="flex items-center justify-between">
+            <div className="flex items-baseline justify-between">
               <div className="flex items-baseline md:space-x-2.5">
                 <span className="md:text-[32px] text-[15px] font-bold leading-normal">
                   {sum(balance)}
@@ -85,12 +64,12 @@ const ProgressBar = () => {
             </span>
 
             <div className="p-1 md:p-1.5 border md:border-2 border-black border-solid">
-              <ul className="flex justify-between space-x-1.5  md:space-x-2.5 md:border border-[0.5px] border-black border-solid flex-nowrap">
+              <ul className="flex justify-between gap-x-0.5 sm:gap-x-1 md:gap-x-2 md:border border-[0.5px] border-black border-solid flex-nowrap">
                 {itemBar.map(({ id, isBalance }) => {
                   return (
                     <li
                       key={id}
-                      className="h-4 bg-white md:h-11 basis-2 md:basis-5"
+                      className="h-4 bg-white sm:h-9 md:h-11 basis-3 sm:basis-4 md:basis-5"
                       style={{
                         backgroundColor: isBalance ? "#2D362E" : "FFFFFF",
                       }}
@@ -100,7 +79,7 @@ const ProgressBar = () => {
               </ul>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-baseline justify-between">
               <span className="font-medium leading-normal text-[8px] md:text-[15px]">
                 {balancePart}%
               </span>
