@@ -19,7 +19,7 @@ const Important = () => {
         </div>
       </div>
 
-      <div className='flex flex-col items-center p-5 bg-orange m-7 sm:hidden rounded-xl'>
+      <div className='flex flex-col items-center p-5 bg-[#F7732A] m-7 sm:hidden rounded-xl'>
         <div className='flex flex-col items-center p-3 max-w-[160px]'>
           <IconQuestion color='white' />
           <p className='mt-5 text-sm text-center'>
@@ -41,10 +41,10 @@ const Important = () => {
       </div>
 
       <div
-        className='h-[140px] bg-cover bg-center w-full sm:h-[450px] mb-10'
+        className='h-[140px] bg-cover bg-center max-w-5xl sm:h-[450px] mb-14 mx-auto'
         style={{ backgroundImage: `url("${backgroundImageUrl}")` }}
       >
-        <div className='max-w-4xl xl:mx-auto'>
+        <div className='max-w-4xl'>
           <div className='flex items-center self-center w-full p-7 sm:p-5'>
             <p className='font-bold text-[16px] text-white sm:text-[24px] sm:w-[418px] sm:self-start'>
               Підтримавши цей благодійний проект ти наближаєш нашу армію до
@@ -52,27 +52,30 @@ const Important = () => {
             </p>
           </div>
 
-          <div className='flex bg-white max-w-4xl max-sm:hidden border-r-2 mt-4 h-[191px] items-center rounded-e-xl opacity-80 xl:rounded-xl'>
+          <div
+            className='flex bg-white max-w-4xl max-sm:hidden border-r-2 mt-4 h-[191px] items-center rounded-e-xl'
+            style={{ background: `rgba(255, 255, 255, 0.60)` }}
+          >
             <div className='flex flex-col items-center p-3 border-r-2 border-gray-400'>
-              <IconQuestion color='orange' />
+              <IconQuestion color='#F7732A' />
               <p className='text-center text-black pt-7'>
                 Максимізація ефективності у знищенні ворога.
               </p>
             </div>
             <div className='flex flex-col items-center p-3'>
-              <IconFire color='orange' />
+              <IconFire color='#F7732A' />
               <p className='text-center text-black pt-7'>
                 Максимізація ефективності у знищенні ворога.
               </p>
             </div>
             <div className='flex flex-col items-center p-3 border-gray-400 border-x-2'>
-              <IconShield color='orange' />
+              <IconShield color='#F7732A' />
               <p className='text-center text-black pt-7'>
                 Максимізація ефективності у знищенні ворога.
               </p>
             </div>
             <div className='flex flex-col items-center p-3'>
-              <IconKnife color='orange' />
+              <IconKnife color='#F7732A' />
               <p className='text-center text-black pt-7'>
                 Максимізація ефективності у знищенні ворога.
               </p>
