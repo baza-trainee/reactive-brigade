@@ -7,18 +7,14 @@ const itemBar = Array.from({ length: 24 }, (_, idx) => ({
   isBalance: false,
 }));
 
-const sum = (number) => number.toLocaleString("ru-RU");
+const sum = (number) => Number(number).toLocaleString("ru-RU");
 
 const ProgressBar = () => {
-  const res = useQuery({
+  const { data: balance = 0 } = useQuery({
     queryKey: ["accountBalance"],
     queryFn: fetchAccountBalance,
     refetchInterval: 60000,
   });
-  console.log(res); //приходит объект со свойстовм data, но там undefinde
-
-  const balance = Math.floor(res.data.jars[0].balance / 100);
-  //   const balance = 45000;
 
   const balancePart = balance ? Math.floor((balance / 250000) * 100) : 0;
   const progress = Math.floor((itemBar.length / 100) * balancePart);
