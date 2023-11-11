@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import { fetchAccountBalance } from "../services/fetchAccountBalance";
+// import { useQuery } from "@tanstack/react-query";
+// import { fetchAccountBalance } from "../services/fetchAccountBalance";
 import svg from "../assets/progress-bar/goal.svg";
 
 const itemBar = Array.from({ length: 24 }, (_, idx) => ({
@@ -10,12 +10,12 @@ const itemBar = Array.from({ length: 24 }, (_, idx) => ({
 const sum = (number) => Number(number).toLocaleString("ru-RU");
 
 const ProgressBar = () => {
-  const { data: balance = 0 } = useQuery({
-    queryKey: ["accountBalance"],
-    queryFn: fetchAccountBalance,
-    refetchInterval: 60000,
-  });
-
+  //   const { data: balance = 0 } = useQuery({
+  //     queryKey: ["accountBalance"],
+  //     queryFn: fetchAccountBalance,
+  //     refetchInterval: 60000,
+  //   });
+  const balance = 50000;
   const balancePart = balance ? Math.floor((balance / 250000) * 100) : 0;
   const progress = Math.floor((itemBar.length / 100) * balancePart);
 

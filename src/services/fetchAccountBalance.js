@@ -12,8 +12,8 @@ export const fetchAccountBalance = async () => {
 		}
 
 		const data = await response.json();
-		const balance = Math.floor(data.jars[0].balance / 100);
 
+		const balance = Math.floor(data.jars[0].balance / 100);
 		return balance;
 	} catch (error) {
 		console.log(error);
