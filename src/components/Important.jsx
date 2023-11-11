@@ -46,36 +46,36 @@ const Important = () => {
 				className='h-[140px] bg-cover bg-center max-w-5xl md:min-h-[450px] mb-14 mx-auto'
 				style={{ backgroundImage: `url("${backgroundImageUrl}")` }}>
 				<div className='max-w-4xl'>
-					<div className='flex items-center self-center w-full p-7 sm:p-5'>
-						<p className='font-bold text-white md:pl-4 sm:text-2xl sm:max-w-md sm:self-start'>
+					<div className='flex items-center self-center w-full p-7 sm:p-5 '>
+						<p className='font-bold text-white sm:text-2xl sm:max-w-md sm:self-start md:pl-11'>
 							Підтримавши цей благодійний проект ти наближаєш нашу
 							армію до перемоги
 						</p>
 					</div>
 
 					<div
-						className='flex items-center max-w-4xl mt-4 text-center text-black bg-white border-r-2 max-md:hidden rounded-e-xl'
+						className='flex items-start max-w-4xl mt-4 text-center text-black bg-white border-r-2 max-md:hidden rounded-e-xl'
 						style={{ background: `rgba(255, 255, 255, 0.60)` }}>
-						<div className='flex flex-col items-center p-8 border-r-2 border-gray-400'>
+						<div className='flex flex-col items-center py-5 pr-8 border-r-2 border-gray-400 md:pl-16'>
 							<IconQuestion color='#F7732A' />
 							<p className='pt-7'>
 								Неперевершена майстерність в боротьбі із ворогом
 							</p>
 						</div>
-						<div className='flex flex-col items-center px-8 py-3'>
+						<div className='flex flex-col items-center px-8 py-5'>
 							<IconFire color='#F7732A' />
 							<p className='pt-7'>
 								Потужність в руках справжніх
 								захисників
 							</p>
 						</div>
-						<div className='flex flex-col items-center px-8 py-3 border-gray-400 border-x-2'>
+						<div className='flex flex-col items-center px-8 py-5 border-gray-400 border-x-2'>
 							<IconShield color='#F7732A' />
 							<p className='pt-7'>
               Завдання – знищити ворога, зберегти мир
 							</p>
 						</div>
-						<div className='flex flex-col items-center px-8 py-3'>
+						<div className='flex flex-col items-center px-8 py-5'>
 							<IconKnife color='#F7732A' />
 							<p className='pt-7'>
 								Максимізація ефективності у знищенні ворогів
