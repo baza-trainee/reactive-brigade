@@ -1,6 +1,7 @@
+import { useState } from 'react';
+import { Link } from 'react-scroll';
 import BurgerMenu from './Burger-menu';
 import logo from '../../assets/header/logo.svg'
-import { useState } from 'react';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -30,12 +31,36 @@ const Header = () => {
                     </div>
                     <nav className="hidden py-3 md:block">
                         <ul className="flex gap-x-8">
-                            <li className="text-lg font-normal text-white font-heading">Наша мета</li>
-                            <li className="text-lg font-normal text-white font-heading">Про бригаду</li>
-                            <li className="text-lg font-normal text-white font-heading">Чому це важливо</li>
+                            <li className="text-lg font-normal text-white transition-all duration-300 cursor-pointer font-heading hover:text-orange">
+                                <Link
+                                    duration={500}
+                                    to="goal"
+                                    aria-label="Move to Goal section"
+                                >
+                                    Наша мета
+                                </Link>
+                            </li>
+                            <li className="text-lg font-normal text-white transition-all duration-300 cursor-pointer font-heading hover:text-orange">
+                                <Link
+                                    duration={500}
+                                    to="about"
+                                    aria-label="Move to about section"
+                                >
+                                    Про бригаду
+                                </Link>
+                            </li>
+                            <li className="text-lg font-normal text-white transition-all duration-300 cursor-pointer font-heading hover:text-orange">
+                                <Link
+                                    to="important"
+                                    duration={500}
+                                    aria-label="Move to important section"
+                                >
+                                    Чому це важливо
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
-                    <div className="relative hidden after:bg-orange after:block after:absolute after:inset-1 after:w-36 after:h-8 after:blur-none after:hover:blur-md md:block">
+                    <div className="relative hidden after:bg-orange after:block after:absolute after:inset-1 after:w-36 after:h-8 after:blur-none after:hover:blur-md md:block after:transition-all after:duration-200">
                         <button className="relative z-30 py-2 text-lg text-white rounded bg-orange px-7 font-body" type="button">ДОНАТИТИ</button>
                     </div>
                     <div onClick={() => toggleMenu()}
@@ -43,7 +68,7 @@ const Header = () => {
                         <span className={burgerSpanClass}></span>
                     </div>
                 </div>
-                <BurgerMenu menuOpen={menuOpen}/>
+                <BurgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             </header>
         </>
     );
