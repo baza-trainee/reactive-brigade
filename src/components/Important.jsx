@@ -7,7 +7,7 @@ import { IconShield } from '../assets/important/icon-shield';
 const Important = () => {
 	return (
 		<section className='md:mb-16 mb-11'>
-			<div className='flex flex-col w-[275px] m-auto md:flex-row md:w-full sm:justify-center sm:pb-5  uppercase text-3xl font-bold lg:text-7xl'>
+			<div className='flex flex-col w-[275px] m-auto md:flex-row md:w-full sm:justify-center sm:pb-5 uppercase text-3xl font-bold lg:text-7xl text-black'>
 				<h3>
 					чому це&nbsp;
 				</h3>
