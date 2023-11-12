@@ -19,7 +19,7 @@ const Share = () => {
 		<>
 			<section className='flex max-w-5xl mx-auto w-[90vw] md:w-full md:mb-16 mb-11'>
 				<div className='flex-1 pt-5 pb-3 text-center text-white rounded md:text-start bg-orange md:rounded-s md:pl-16 md:pt-16 md:pb-8 md:rounded-none'>
-					<h2 className='mb-2 font-heading md:text-7xl z-10 md:mr-[-360px]'>
+					<h2 className='mb-2 font-heading sm:text-5xl lg:text-7xl z-10 md:mr-[-360px]'>
 						В ЄДНАННІ - СИЛА!
 					</h2>
 					<h3 className='text-sm md:text-2xl'>
