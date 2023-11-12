@@ -6,7 +6,7 @@ import { IconShield } from '../assets/important/icon-shield';
 
 const Important = () => {
 	return (
-		<section id='important' className='md:mb-16 mb-11'>
+		<section id='important'>
 			<div className='flex flex-col w-[275px] m-auto md:flex-row md:w-full sm:justify-center sm:pb-5 uppercase text-3xl font-bold lg:text-7xl text-black'>
 				<h3>чому це&nbsp;</h3>
 				<div className='flex self-end font-bold text-center'>
@@ -37,7 +37,7 @@ const Important = () => {
 			</div>
 
 			<div
-				className='h-[140px] bg-cover bg-center max-w-5xl md:min-h-[450px] mb-14 mx-auto hidden md:block'
+				className='h-[140px] bg-cover bg-center max-w-5xl md:min-h-[450px] mb-11 mx-auto'
 				style={{ backgroundImage: `url("${backgroundImageUrl}")` }}>
 				<div className='max-w-4xl'>
 					<div className='flex items-center self-center w-full p-7 sm:p-5 '>
@@ -48,7 +48,7 @@ const Important = () => {
 					</div>
 
 					<div
-						className='flex items-start max-w-4xl mt-4 text-center text-black bg-white border-r-2 max-md:hidden rounded-e-xl'
+						className='items-start hidden max-w-4xl mt-4 text-center text-black bg-white border-r-2 md:flex rounded-e-xl'
 						style={{ background: `rgba(255, 255, 255, 0.60)` }}>
 						<div className='flex flex-col items-center py-5 pr-8 border-r-2 border-gray-400 md:pl-16'>
 							<IconQuestion color='#F7732A' />

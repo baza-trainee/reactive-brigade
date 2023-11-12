@@ -28,7 +28,7 @@ const Share = () => {
 					<p className='my-5 text-xs text-black md:text-base'>
 						Наближай перемогу
 					</p>
-					<div className='flex flex-col items-center gap-3 mt-3 mr-4 md:gap-8 md:flex-row'>
+					<div className='flex flex-col items-center gap-3 mt-3 md:mr-4 md:gap-8 md:flex-row'>
 						<button
 							className='px-4 py-3 font-medium duration-300 rounded bg-green hover:shadow-inner hover:shadow-slate-200'
 							onClick={openModal}>
