@@ -32,7 +32,7 @@ const Hero = () => {
           href="https://www.monobank.com.ua/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-shrink-0 px-4 py-3 text-base font-medium uppercase duration-300 rounded-md sm:mt-8 sm:text-lg focus:shadow-xl focus:outline-none bg-orange hover:shadow-inner hover:shadow-slate-200"
+          className="z-10 flex-shrink-0 px-4 py-3 text-base font-medium uppercase duration-300 rounded-md sm:mt-8 sm:text-lg focus:shadow-xl focus:outline-none bg-orange hover:shadow-inner hover:shadow-slate-200"
         >
           Донат на пікап
         </a>

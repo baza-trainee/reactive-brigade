@@ -23,10 +23,10 @@ const ProgressBar = () => {
   }
 
   return (
-    <section className="max-w-4xl mx-auto py-14 w-[90vw]">
-      <h2 className="flex items-center justify-center text-[32px] md:text-[70px] leading-none font-semibold text-center text-black mb-8 md:mb-[90px]">
+    <section id="goal" className="max-w-4xl mx-auto py-14 w-[90vw]">
+      <h2 className="flex items-center justify-center text-3xl sm:text-5xl lg:text-7xl leading-none font-semibold text-center text-black mb-8 md:mb-[90px]">
         Мета
-        <span className="border rounded-full w-[54px] h-[54px]  -ml-[40px]  md:w-[116px] md:h-[116px]  md:-ml-[86px] border-orange -z-10"></span>
+        <span className="border rounded-full w-[54px] h-[54px]  -ml-[38px]  sm:w-[86px] sm:h-[86px] sm:-ml-[60px] lg:w-[116px] lg:h-[116px]  lg:-ml-[90px] border-orange -z-10"></span>
       </h2>
       <p className="text-center font-medium leading-normal text-[20px] text-black mx-auto mb-4 md:hidden">
         Разом до перемоги !!!

@@ -3,9 +3,9 @@ import logo from "../assets/about-brigade/logoAbout.svg";
 
 const About = () => {
   return (
-    <section className="block w-[90vw] max-w-4xl mx-auto md:mb-16 mb-11">
+    <section id="about" className="block w-[90vw] max-w-4xl mx-auto md:mb-16 mb-11">
       <div className="flex items-center gap-2.5 sm:gap-5 mb-14">
-        <h2 className="text-3xl font-semibold text-black sm:text-7xl">
+        <h2 className="text-3xl font-semibold text-black sm:text-5xl lg:text-7xl">
           Про бригаду
         </h2>
         <img className="h-10 sm:h-28" src={logo} alt="logo" />
