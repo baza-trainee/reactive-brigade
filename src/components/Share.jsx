@@ -1,7 +1,7 @@
 import { LiaFacebookF, LiaLinkedinIn, LiaTelegram } from 'react-icons/lia';
 
 import ModalComponent from './Modal';
-import shareImg from '../assets/share.jpg';
+import share from '../assets/share.jpg';
 import { useState } from 'react';
 
 const Share = () => {
@@ -19,7 +19,7 @@ const Share = () => {
 		<>
 			<section className='flex max-w-5xl mx-auto w-[90vw] md:w-full md:mb-16 mb-11'>
 				<div className='flex-1 pt-5 pb-3 text-center text-white rounded md:text-start bg-orange md:rounded-s md:pl-16 md:pt-16 md:pb-8 md:rounded-none'>
-					<h2 className='mb-2 font-heading md:text-7xl z-10 md:mr-[-300px]'>
+					<h2 className='mb-2 font-heading md:text-7xl z-10 md:mr-[-360px]'>
 						В ЄДНАННІ - СИЛА!
 					</h2>
 					<h3 className='text-sm md:text-2xl'>
@@ -28,9 +28,9 @@ const Share = () => {
 					<p className='my-5 text-xs text-black md:text-base'>
 						Наближай перемогу
 					</p>
-					<div className='flex flex-col items-center gap-3 mt-3 md:gap-8 md:flex-row'>
+					<div className='flex flex-col items-center gap-3 mt-3 mr-4 md:gap-8 md:flex-row'>
 						<button
-							className='px-4 py-3 font-medium duration-300 rounded bg-green hover:shadow hover:shadow-slate-200'
+							className='px-4 py-3 font-medium duration-300 rounded bg-green hover:shadow-inner hover:shadow-slate-200'
 							onClick={openModal}>
 							ПОДІЛИТИСЬ
 						</button>
@@ -41,7 +41,7 @@ const Share = () => {
 								rel='noopener noreferrer'>
 								<LiaFacebookF
 									size={30}
-									className='p-1 duration-300 bg-blue-800 hover:shadow hover:shadow-slate-200'
+									className='p-1 duration-300 bg-blue-800 hover:shadow-inner hover:shadow-slate-200'
 								/>
 							</a>
 							<a
@@ -50,7 +50,7 @@ const Share = () => {
 								rel='noopener noreferrer'>
 								<LiaTelegram
 									size={30}
-									className='p-1 duration-300 bg-sky-500 hover:shadow hover:shadow-slate-200'
+									className='p-1 duration-300 bg-sky-500 hover:shadow-inner hover:shadow-slate-200'
 								/>
 							</a>
 							<a
@@ -59,7 +59,7 @@ const Share = () => {
 								rel='noopener noreferrer'>
 								<LiaLinkedinIn
 									size={30}
-									className='p-1 duration-300 bg-blue-800 hover:shadow hover:shadow-slate-200'
+									className='p-1 duration-300 bg-blue-800 hover:shadow-inner hover:shadow-slate-200'
 								/>
 							</a>
 						</div>
@@ -67,9 +67,9 @@ const Share = () => {
 				</div>
 				<div className='hidden md:block z-[-10] '>
 					<img
-						src={shareImg}
+						src={share}
 						alt='vehicle'
-						className='block object-cover w-full h-auto'
+						className='block object-cover w-full h-full'
 					/>
 				</div>
 			</section>

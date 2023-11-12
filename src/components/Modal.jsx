@@ -6,31 +6,34 @@ import { GoShareAndroid } from 'react-icons/go';
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
 
-const customStyles = {
-	content: {
-		top: '50%',
-		left: '50%',
-		right: 'auto',
-		bottom: 'auto',
-		marginRight: '-50%',
-		transform: 'translate(-50%, -50%)',
-		backgroundColor: '#F7732A',
-		padding: '3rem',
-	},
-	overlay: {
-		position: 'fixed',
-		top: 0,
-		left: 0,
-		right: 0,
-		bottom: 0,
-		backgroundColor: 'rgba(0, 0, 0, 0.5)',
-	},
-};
 Modal.setAppElement('#root');
 
 const ModalComponent = ({ isModalOpen, closeModal }) => {
 	const [isCopied, setIsCopied] = useState(false);
-
+	const customStyles = {
+		content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%',
+			transform: 'translate(-50%, -50%)',
+			backgroundColor: '#F7732A',
+			transition: 'all 1s ease-in-out',
+			opacity: isModalOpen ? 1 : 0,
+			padding: '3rem',
+		},
+		overlay: {
+			position: 'fixed',
+			top: 0,
+			left: 0,
+			right: 0,
+			bottom: 0,
+			backgroundColor: 'rgba(0, 0, 0, 0.5)',
+			transition: 'all 1s ease-in-out',
+			opacity: isModalOpen ? 1 : 0,
+		},
+	};
 	useEffect(() => {
 		if (isModalOpen) {
 			document.body.classList.add('overflow-hidden');
@@ -67,6 +70,7 @@ const ModalComponent = ({ isModalOpen, closeModal }) => {
 			isOpen={isModalOpen}
 			onRequestClose={closeModal}
 			style={customStyles}
+			closeTimeoutMS={1000}
 			contentLabel='Modal'>
 			<section className='relative text-center text-white'>
 				<h3 className='text-xl font-semibold md:text-3xl'>
@@ -84,7 +88,7 @@ const ModalComponent = ({ isModalOpen, closeModal }) => {
 							)}`}
 							target='_blank'
 							rel='noopener noreferrer'
-							className='p-1 duration-300 bg-blue-800 hover:shadow hover:shadow-slate-200'>
+							className='p-1 duration-300 bg-blue-800 hover:shadow-inner hover:shadow-slate-200'>
 							<LiaFacebookF size={30} />
 						</a>
 						<a
@@ -93,7 +97,7 @@ const ModalComponent = ({ isModalOpen, closeModal }) => {
 							)}`}
 							target='_blank'
 							rel='noopener noreferrer'
-							className='p-1 duration-300 bg-sky-500 hover:shadow hover:shadow-slate-200'>
+							className='p-1 duration-300 bg-sky-500 hover:shadow-inner hover:shadow-slate-200'>
 							<LiaTelegram size={30} />
 						</a>
 						<a
@@ -102,13 +106,13 @@ const ModalComponent = ({ isModalOpen, closeModal }) => {
 							)}`}
 							target='_blank'
 							rel='noopener noreferrer'
-							className='p-1 duration-300 bg-blue-800 hover:shadow hover:shadow-slate-200'>
+							className='p-1 duration-300 bg-blue-800 hover:shadow-inner hover:shadow-slate-200'>
 							<LiaLinkedinIn size={30} />
 						</a>
 					</div>
 					<p className='mb-4'>Або скопіюйте посилання</p>
 					<button
-						className='flex items-center gap-4 px-4 py-3 mx-auto font-medium duration-300 rounded bg-green hover:shadow hover:shadow-slate-200'
+						className='flex items-center gap-4 px-4 py-3 mx-auto font-medium duration-300 rounded bg-green hover:shadow-inner hover:shadow-slate-200'
 						onClick={copyToClipboard}>
 						Скопіюйте посилання
 						<GoShareAndroid size='20' />
