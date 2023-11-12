@@ -25,7 +25,7 @@ const ProgressBar = () => {
 
   return (
     <section id="goal" className="max-w-4xl mx-auto py-14 w-[90vw]">
-      <h2 className=" relative text-[70px] leading-none font-semibold text-center text-black mb-8 md:mb-[90px]">
+      <h2 className=" relative text-3xl sm:text-5xl lg:text-7xl font-semibold text-center text-black mb-8 md:mb-[90px]">
         Мета
         <img
           className="absolute ml-3 -top-1/4 start-1/2 -z-10"
