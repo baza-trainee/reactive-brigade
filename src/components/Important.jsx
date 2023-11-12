@@ -8,16 +8,10 @@ const Important = () => {
 	return (
 		<section id='important' className='md:mb-16 mb-11'>
 			<div className='flex flex-col w-[275px] m-auto md:flex-row md:w-full sm:justify-center sm:pb-5 uppercase text-3xl font-bold lg:text-7xl text-black'>
-				<h3>
-					чому це&nbsp;
-				</h3>
+				<h3>чому це&nbsp;</h3>
 				<div className='flex self-end font-bold text-center'>
-					<h3>
-						важливо
-					</h3>
-					<h3 className='pl-2 text-orange'>
-						?
-					</h3>
+					<h3>важливо</h3>
+					<h3 className='pl-2 text-orange'>?</h3>
 				</div>
 			</div>
 
@@ -43,7 +37,7 @@ const Important = () => {
 			</div>
 
 			<div
-				className='h-[140px] bg-cover bg-center max-w-5xl md:min-h-[450px] mb-14 mx-auto'
+				className='h-[140px] bg-cover bg-center max-w-5xl md:min-h-[450px] mb-14 mx-auto hidden md:block'
 				style={{ backgroundImage: `url("${backgroundImageUrl}")` }}>
 				<div className='max-w-4xl'>
 					<div className='flex items-center self-center w-full p-7 sm:p-5 '>
@@ -65,14 +59,13 @@ const Important = () => {
 						<div className='flex flex-col items-center px-8 py-5'>
 							<IconFire color='#F7732A' />
 							<p className='pt-7'>
-								Потужність в руках справжніх
-								захисників
+								Потужність в руках справжніх захисників
 							</p>
 						</div>
 						<div className='flex flex-col items-center px-8 py-5 border-gray-400 border-x-2'>
 							<IconShield color='#F7732A' />
 							<p className='pt-7'>
-              Завдання – знищити ворога, зберегти мир
+								Завдання – знищити ворога, зберегти мир
 							</p>
 						</div>
 						<div className='flex flex-col items-center px-8 py-5'>
