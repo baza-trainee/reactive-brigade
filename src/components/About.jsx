@@ -4,7 +4,7 @@ import logo from '../assets/about-brigade/logoAbout.svg';
 
 const About = () => {
 	return (
-		<section className='block w-[90vw] max-w-4xl mx-auto md:w-full mb-11'>
+		<section id='about' className='block w-[90vw] max-w-4xl mx-auto md:w-full mb-11'>
 			<div className='flex items-center gap-2.5 mb-14 sm:gap-5'>
 				<h2 className='text-3xl font-semibold text-neutral-700 sm:text-7xl'>
 					Про бригаду

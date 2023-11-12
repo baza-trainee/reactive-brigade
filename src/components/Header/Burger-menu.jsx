@@ -5,7 +5,7 @@ const BurgerMenu = (props) => {
 
     props.menuOpen
         ? burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-0 bg-green transition-all duration-500'
-        : burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-full bg-green transition-all duration-500';
+        : burgerMenuClass = 'fixed top-0 left-0 z-20 w-full h-screen translate-x-full bg-green';
 
     return (
         <>
@@ -15,8 +15,9 @@ const BurgerMenu = (props) => {
                         <ul className="flex flex-col items-center gap-y-6">
                             <li className="w-full pb-3 text-center text-white border-b-2 border-white">
                                 <Link
-                                    duration={500}
+                                    onClick={() => { props.setMenuOpen(!props.menuOpen) }}
                                     to="goal"
+                                    duration={500}
                                     aria-label="Move to Goal section"
                                 >
                                     <span className="text-3xl font-normal text-white font-heading">Наша мета</span>
@@ -24,15 +25,17 @@ const BurgerMenu = (props) => {
                             </li>
                             <li className="w-full pb-3 text-center text-white border-b-2 border-white">
                                 <Link
-                                    duration={500}
+                                    onClick={() => { props.setMenuOpen(!props.menuOpen) }}
                                     to="about"
+                                    duration={500}
                                     aria-label="Move to about section"
                                 >
                                     <span className="text-3xl font-normal text-white font-heading">Про бригаду</span>
                                 </Link>
                             </li>
-                            <li className="w-full pb-3 text-center text-white border-b-2 border-white" >
+                            <li className="w-full pb-3 text-center text-white border-b-2 border-white">
                                 <Link
+                                    onClick={() => { props.setMenuOpen(!props.menuOpen) }}
                                     to="important"
                                     duration={500}
                                     aria-label="Move to important section"

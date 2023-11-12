@@ -10,7 +10,7 @@ const Header = () => {
 
     let burgerSpanClass = 'right-0 w-full h-0.5 bg-orange absolute top-1/2 transform -translate-y-1/2';
 
-    const toggleMenu = () => {
+    const toggleMenu = (delay = null) => {
         setMenuOpen(!menuOpen)
     };
 
@@ -25,7 +25,7 @@ const Header = () => {
     return (
         <>
             <header className="bg-green">
-                <div className="flex items-center max-w-3xl px-4 mx-auto md:gap-x-6 lg:max-w-5xl lg:gap-x-20 gap-x-0">
+                <div className="flex items-center max-w-3xl px-4 mx-auto md:gap-x-6 lg:max-w-4xl lg:gap-x-20 gap-x-0">
                     <div className="py-1.5 grow">
                         <img src={logo} alt="" />
                     </div>
