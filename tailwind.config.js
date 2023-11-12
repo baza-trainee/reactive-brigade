@@ -18,6 +18,9 @@ export default {
 			},
 			maxWidth: {
 				'230px': '230px'
+			},
+			screens: {
+				'tablet-850': {'max': '850px'},
 			}
 		},
 	},
