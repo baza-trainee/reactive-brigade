@@ -1,6 +1,5 @@
 // import { useQuery } from "@tanstack/react-query";
 // import { fetchAccountBalance } from "../services/fetchAccountBalance";
-import svg from "../assets/progress-bar/goal.svg";
 
 const itemBar = Array.from({ length: 24 }, (_, idx) => ({
   id: idx + 1,
@@ -25,13 +24,9 @@ const ProgressBar = () => {
 
   return (
     <section className="max-w-4xl mx-auto py-14 w-[90vw]">
-      <h2 className=" relative text-[70px] leading-none font-semibold text-center text-black mb-8 md:mb-[90px]">
+      <h2 className="flex items-center justify-center text-[32px] md:text-[70px] leading-none font-semibold text-center text-black mb-8 md:mb-[90px]">
         Мета
-        <img
-          className="absolute ml-3 -top-1/4 start-1/2 -z-10"
-          src={svg}
-          alt="svg ellipse"
-        />
+        <span className="border rounded-full w-[54px] h-[54px]  -ml-[40px]  md:w-[116px] md:h-[116px]  md:-ml-[86px] border-orange -z-10"></span>
       </h2>
       <p className="text-center font-medium leading-normal text-[20px] text-black mx-auto mb-4 md:hidden">
         Разом до перемоги !!!
