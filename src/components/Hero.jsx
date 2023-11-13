@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="flex flex-col items-center justify-around gap-5 p-3 pt-24 text-center text-white rounded-lg sm:flex-row text-clip sm:text-left sm:pt-32 sm:p-8 bg-green">
         <div className="relative z-30">
           <p className="hidden mb-4 text-2xl font-medium sm:block">Мета
-            <span className="md:text-4xl sm:text-3xl font-heading"> 250 000</span> грн
+            <span className="md:text-4xl sm:text-3xl font-heading"> 250 000 грн</span>
           </p>
           <p className="text-sm sm:text-base">
             Наша мета зібрати

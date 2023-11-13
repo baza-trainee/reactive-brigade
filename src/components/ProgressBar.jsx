@@ -14,7 +14,7 @@ const ProgressBar = () => {
   //     queryFn: fetchAccountBalance,
   //     refetchInterval: 60000,
   //   });
-  const balance = 50000;
+  const balance = 0;
   const balancePart = balance ? Math.floor((balance / 250000) * 100) : 0;
   const progress = Math.floor((itemBar.length / 100) * balancePart);
 
@@ -37,7 +37,7 @@ const ProgressBar = () => {
           <div className="flex items-baseline justify-between">
             <div className="flex items-baseline md:space-x-2.5">
               <span className="md:text-[32px] text-[15px] font-bold leading-normal">
-                {sum(balance)}
+                {sum(balance)} грн
               </span>
               <span className="font-normal md:leading-[20px] text-[15px] hidden md:block">
                 Вже зібрано
@@ -78,7 +78,7 @@ const ProgressBar = () => {
                 Спільна мета
               </span>
               <span className="text-[15px] md:text-[32px] font-bold leading-normal text-orange">
-                {sum(250000)}
+                {sum(250000)} грн
               </span>
             </div>
           </div>
