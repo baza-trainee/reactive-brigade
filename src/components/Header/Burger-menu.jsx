@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 const BurgerMenu = (props) => {
 	let burgerMenuClass =
-		'fixed top-0 left-0 z-20 w-full h-screen translate-x-full bg-green transition-all duration-500';
+		'fixed top-0 left-0 z-40 w-full h-screen translate-x-full bg-green transition-all duration-500';
 
 	props.isMenuOpen
 		? (burgerMenuClass =
-				'fixed top-0 left-0 z-20 w-full h-screen translate-x-0 bg-green transition-all duration-500')
+				'fixed top-0 left-0 z-40 w-full h-screen translate-x-0 bg-green transition-all duration-500')
 		: (burgerMenuClass =
-				'fixed top-0 left-0 z-20 w-full h-screen translate-x-full bg-green');
+				'fixed top-0 left-0 z-40 w-full h-screen translate-x-full bg-green');
 
 	return (
 		<>
