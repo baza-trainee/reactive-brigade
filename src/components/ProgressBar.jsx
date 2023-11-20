@@ -1,5 +1,5 @@
-// import { useQuery } from "@tanstack/react-query";
 // import { fetchAccountBalance } from "../services/fetchAccountBalance";
+// import { useQuery } from "@tanstack/react-query";
 
 const itemBar = Array.from({ length: 24 }, (_, idx) => ({
   id: idx + 1,
@@ -9,11 +9,11 @@ const itemBar = Array.from({ length: 24 }, (_, idx) => ({
 const sum = (number) => Number(number).toLocaleString("ru-RU");
 
 const ProgressBar = () => {
-  //   const { data: balance = 0 } = useQuery({
-  //     queryKey: ["accountBalance"],
-  //     queryFn: fetchAccountBalance,
-  //     refetchInterval: 60000,
-  //   });
+    // const { data: balance = 0 } = useQuery({
+    //   queryKey: ["accountBalance"],
+    //   queryFn: fetchAccountBalance,
+    //   refetchInterval: 60000,
+    // });
   const balance = 0;
   const balancePart = balance ? Math.floor((balance / 250000) * 100) : 0;
   const progress = Math.floor((itemBar.length / 100) * balancePart);
@@ -26,7 +26,7 @@ const ProgressBar = () => {
     <section id="goal" className="max-w-4xl mx-auto py-14 w-[90vw]">
       <h2 className="flex items-center justify-center text-3xl sm:text-5xl lg:text-7xl leading-none font-semibold text-center text-black mb-8 md:mb-[90px]">
         Мета
-        <span className="border rounded-full w-[54px] h-[54px]  -ml-[38px]  sm:w-[86px] sm:h-[86px] sm:-ml-[60px] lg:w-[116px] lg:h-[116px]  lg:-ml-[90px] border-orange -z-10"></span>
+        <span className="border rounded-full w-[54px] h-[54px] -ml-[38px] sm:w-[86px] sm:h-[86px] sm:-ml-[60px] lg:w-[116px] lg:h-[116px] lg:-ml-[90px] border-orange -z-10"></span>
       </h2>
       <p className="text-center font-medium leading-normal text-[20px] text-black mx-auto mb-4 md:hidden">
         Разом до перемоги !!!

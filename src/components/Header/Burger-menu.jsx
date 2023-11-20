@@ -60,9 +60,9 @@ const BurgerMenu = (props) => {
 					</nav>
 					<div className='block mt-16 text-center md:hidden'>
 						<a
-							href='https://www.monobank.com.ua/'
+							href='https://send.monobank.ua/jar/5wMdvn59S'
 							target='_blank'
-							rel='noreferrer'
+							rel='noopener noreferrer'
 							className='py-4 mx-auto text-3xl text-white rounded bg-orange px-7 font-body focus:outline-none'>
 							ДОНАТИТИ
 						</a>

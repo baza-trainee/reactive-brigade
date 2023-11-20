@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import { Link } from 'react-scroll';
+import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
 
 import BurgerMenu from './Burger-menu';
-
-import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
+import { Link } from 'react-scroll';
 import logo from '../../assets/header/logo.svg';
+import { useState } from 'react';
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,9 +57,9 @@ const Header = () => {
 					</div>
 					<div className='hidden md:block '>
 						<a
-							href='https://www.monobank.com.ua/'
+							href='https://send.monobank.ua/jar/5wMdvn59S'
 							target='_blank'
-							rel='noreferrer'
+							rel='noopener noreferrer'
 							className='py-2 text-lg text-white duration-300 rounded tablet-850:px-4 bg-orange px-7 font-body focus:shadow-xl focus:outline-none hover:shadow-inner hover:shadow-slate-200'>
 							ДОНАТИТИ
 						</a>
